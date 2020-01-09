@@ -5,9 +5,9 @@ from typing import Iterator
 
 from pycountry import countries
 
-from .api import GithubApi
-from .config import Config
-from .models import APIContributor
+from api import GithubApi
+from config import Config
+from models import APIContributor
 
 
 class DataWriter:
