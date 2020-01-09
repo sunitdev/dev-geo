@@ -47,8 +47,8 @@ class TestConfig:
         assert isinstance(repo, Repository)
         assert repo.name == 'Project Site'
         assert repo.url == 'https://github.com/sunitdeshpande/DevGeo'
-        assert repo.owner == 'sunitdeshpande'
         assert repo.url_name == 'DevGeo'
+        assert repo.owner == 'sunitdeshpande'
 
 
     def __get_test_config(self):
