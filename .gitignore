@@ -1,0 +1,8 @@
+# Editor file
+.vim/
+
+# Compiled files
+__pycache__/
+
+# Pytest files
+.pytest_cache/
