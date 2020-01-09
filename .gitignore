@@ -6,3 +6,6 @@ __pycache__/
 
 # Pytest files
 .pytest_cache/
+
+# Dist folder
+dist/

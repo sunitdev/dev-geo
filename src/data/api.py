@@ -61,7 +61,9 @@ class GithubApi:
 
             # Parse and return contributor
             for item in contributors_response:
-                yield cls.get_contributor_info(item['login'])
+                # Check if type is user then yeild contributor
+                if item['type'].lower() == 'user':
+                    yield cls.get_contributor_info(item['login'])
 
             # Increment page count
             page += 1
