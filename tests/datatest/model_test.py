@@ -1,6 +1,6 @@
 from .context import *
 
-from data.models import Repository
+from data.models import Repository, APIContributor
 
 class TestRepositoryModel:
     '''
@@ -15,6 +15,23 @@ class TestRepositoryModel:
 
         assert repo.name == 'Test Repo'
         assert repo.url == 'https://github.com/sunitdeshpande/DevGeo'
-        assert repo.owner == 'sunitdeshpande'
         assert repo.url_name == 'DevGeo'
+        assert repo.owner == 'sunitdeshpande'
 
+
+class TestAPIContributorModel:
+    '''
+    Test cases for `data.models.APIContributor` class
+    '''
+
+    def test_api_contributor_constructor(self):
+        '''
+        APIContributor class must accept only login, name and location as parameter
+        '''
+        contributor = APIContributor(login='sunitdeshpande',
+                                     name='SunitDeshpande',
+                                     location='Dublin')
+
+        assert contributor.login == 'sunitdeshpande'
+        assert contributor.name == 'SunitDeshpande'
+        assert contributor.location == 'Dublin'
