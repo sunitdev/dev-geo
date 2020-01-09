@@ -2,7 +2,7 @@ from typing import Iterator
 
 import requests
 
-from models import Repository, APIRepostiory, APIContributor
+from .models import Repository, APIRepostiory, APIContributor
 
 class GithubApi:
     '''

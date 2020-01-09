@@ -1,5 +1,5 @@
-from writer import DataWriter
-from config import Config
+from .writer import DataWriter
+from .config import Config
 
 
 def main():

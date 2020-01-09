@@ -1,7 +1,7 @@
 import os
 import json
 
-from models import Repository
+from .models import Repository
 
 class Config:
     '''

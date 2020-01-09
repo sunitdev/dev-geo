@@ -4,4 +4,4 @@ test:
 	pytest tests
 
 build:
-	cd src/data && python main.py
+	cd src && python -m data.main
