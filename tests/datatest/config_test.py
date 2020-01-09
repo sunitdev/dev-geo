@@ -10,7 +10,7 @@ class TestConfig:
     Test cases for `data.config.Config` class
     '''
 
-    TEST_REPO_CONFI_PATH = os.path.join(TEST_RAW_DIR, 'data','config','config.json')
+    _TEST_REPO_CONFIG_PATH = os.path.join(TEST_RAW_DIR, 'data', 'config.json')
 
     def test_default_parameters(self):
         '''
@@ -29,7 +29,7 @@ class TestConfig:
         '''
         config = self.__get_test_config()
 
-        assert config.config_path == self.TEST_REPO_CONFI_PATH
+        assert config.config_path == self._TEST_REPO_CONFIG_PATH
 
 
     def test_repository_property(self):
@@ -45,9 +45,9 @@ class TestConfig:
         # List must contain instance of Repository dataclass
         repo = config.repositories[0]
         assert isinstance(repo, Repository)
-        assert repo.name == 'Project Site'
-        assert repo.url == 'https://github.com/sunitdeshpande/DevGeo'
-        assert repo.url_name == 'DevGeo'
+        assert repo.name == 'Personal Site'
+        assert repo.url == 'https://github.com/sunitdeshpande/sunitdeshpande.github.io'
+        assert repo.url_name == 'sunitdeshpande.github.io'
         assert repo.owner == 'sunitdeshpande'
 
 
@@ -55,4 +55,4 @@ class TestConfig:
         '''
         Return config object with test config path
         '''
-        return Config(config_path=self.TEST_REPO_CONFI_PATH)
+        return Config(config_path=self._TEST_REPO_CONFIG_PATH)
