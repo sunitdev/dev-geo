@@ -1,3 +1,5 @@
+import os
+
 from typing import Iterator
 
 import requests
@@ -23,8 +25,13 @@ class GithubApi:
         # Create url
         url = cls.__URL_API_REPOSITORY_INFO.format(owner=repo.owner, name=repo.url_name)
 
+        # Headers
+        headers: dict = {
+            'Authorization': f"token {os.environ['DEV_GEO_GITHUB_TOKEN']}"
+        }
+
         # Make request
-        data = requests.get(url).json()
+        data = requests.get(url, headers=headers).json()
 
         # Parse response
         repo = APIRepostiory(
@@ -49,11 +56,16 @@ class GithubApi:
         while True:
             # Query params
             params: dict = {
-                    'page': page
+                'page': page
+            }
+
+            # Headers
+            headers: dict = {
+                'Authorization': f"token {os.environ['DEV_GEO_GITHUB_TOKEN']}"
             }
 
             # Make request
-            contributors_response = requests.get(url, params=params).json()
+            contributors_response = requests.get(url, params=params, headers=headers).json()
 
             # Break if done
             if len(contributors_response) == 0:
@@ -77,8 +89,13 @@ class GithubApi:
         # Create url
         url = cls.__URL_API_USER_INFO.format(login=login)
 
+        # Headers
+        headers: dict = {
+            'Authorization': f"token {os.environ['DEV_GEO_GITHUB_TOKEN']}"
+        }
+
         # Make response
-        data = requests.get(url).json()
+        data = requests.get(url, headers=headers).json()
 
         # Parse response
         return APIContributor(
