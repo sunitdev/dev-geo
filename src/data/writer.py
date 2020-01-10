@@ -5,9 +5,9 @@ from typing import Iterator
 
 from pycountry import countries
 
-from .api import GithubApi
-from .config import Config
-from .models import APIContributor
+from data.api import GithubApi
+from data.config import Config
+from data.models import APIContributor
 
 
 class DataWriter:
@@ -40,13 +40,13 @@ class DataWriter:
         Call github api and write data in format required for frontend
         '''
         # Create output directory if not exists
-        if not os.path.exists(path):
+        if not os.path.exists(os.path.dirname(path)):
             os.makedirs(os.path.dirname(path))
 
         output_data = {}
-
         # For each repo
         for repo in self.config.repositories:
+            print(f'Generating data for {repo.name} ...')
             contributors = GithubApi.get_contributors(repo)
             output_data.update({ repo.name: self.__format_contributors(contributors) })
 
