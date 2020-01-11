@@ -21,12 +21,12 @@ jobs:
           install:
               - pip install -r requirments/development.txt
           script:
-            - make test-data
+              - make test-data
 
         - language: node_js
           nodejs: 12
           install:
-              -yarn install --production=false
+              - yarn install --production=false
           script:
               - make test-frontend
 
