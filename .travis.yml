@@ -10,7 +10,7 @@ script:
     - make test
 
 before-deploy:
-    - make build
+    - make build-all
 
 deploy:
     provider: pages
