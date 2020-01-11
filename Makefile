@@ -1,11 +1,13 @@
 WEBPACK_EXEC = node_modules/.bin/webpack
 WEBPACK_SERVER_EXEC = node_modules/.bin/webpack-dev-server
 
+JEST_EXEC = node_modules/.bin/jest
+
 test-data:
 	pytest tests
 
 test-frontend:
-	echo "test frontend"
+	$(JEST_EXEC)
 
 build-all:
 	python src/data/main.py
