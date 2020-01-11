@@ -1,12 +1,18 @@
 WEBPACK_EXEC = node_modules/.bin/webpack
 WEBPACK_SERVER_EXEC = node_modules/.bin/webpack-dev-server
 
-test:
+test-data:
 	pytest tests
+
+test-frontend:
+	echo "test frontend"
 
 build-all:
 	python src/data/main.py
 	$(WEBPACK_EXEC) --config src/ui/webpack/webpack.prod.js
+
+build-data:
+	python src/data/main.py
 
 build-frontend:
 	$(WEBPACK_EXEC) --config src/ui/webpack/webpack.prod.js
