@@ -15,9 +15,6 @@ stories.add('Default', () => ({
         <template v-slot:content>
             <h1>Content Slot</h1>
         </template>
-        <template v-slot:footer>
-            <h1>Footer Slot</h1>
-        </template>
     </app-template>`
 }));
 

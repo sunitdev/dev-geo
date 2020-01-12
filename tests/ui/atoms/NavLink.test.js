@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 
 import NavLink from '@/components/atoms/NavLink.vue';
 
-// Local vue router
+// local vue router
 const localVue = createLocalVue()
 localVue.use(VueRouter)
 const router = new VueRouter()

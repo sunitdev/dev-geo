@@ -6,9 +6,6 @@
         <section class="flex-grow">
             <slot name="content"></slot>
         </section>
-        <footer>
-            <slot name="footer"></slot>
-        </footer>
     </div>
 </template>
 

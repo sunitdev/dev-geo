@@ -15,7 +15,6 @@ describe('AppTemplate Component', () => {
 
         expect(wrapper.find('header').is('header')).toBe(true);
         expect(wrapper.find('section').is('section')).toBe(true);
-        expect(wrapper.find('footer').is('footer')).toBe(true);
     });
 
     it('section should have flex-grow class', () => {
@@ -29,12 +28,10 @@ describe('AppTemplate Component', () => {
             slots: {
                 header: `<div>Header Slot Content</div>`,
                 content: `<div>Content Slot Content</div>`,
-                footer: `<div>Footer Slot Content</div>`
             }
         });
 
         expect(wrapper.find('header').text().trim()).toBe('Header Slot Content');
         expect(wrapper.find('section').text().trim()).toBe('Content Slot Content');
-        expect(wrapper.find('footer').text().trim()).toBe('Footer Slot Content');
     });
 });
