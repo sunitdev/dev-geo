@@ -2,6 +2,8 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 
 import VueRouter from 'vue-router'
 
+import { ROUTE_HOME, ROUTE_PROJECTS } from '@/routes';
+
 import App from '@/App.vue';
 import AppTemplate from '@/components/templates/AppTemplate.vue';
 
@@ -19,5 +21,20 @@ describe('App.vue Component',() => {
         });
 
         expect(wrapper.find(AppTemplate).exists()).toBe(true);
+    });
+
+    it('should have routers data set to default paths', () => {
+        const wrapper = shallowMount(App,  {
+            localVue,
+            router
+        });
+
+        expect(wrapper.vm.$data.routers).toEqual([{
+            text: 'Home',
+            path: ROUTE_HOME
+        },{
+            text: 'By Project',
+            path: ROUTE_PROJECTS
+        }]);
     });
 });

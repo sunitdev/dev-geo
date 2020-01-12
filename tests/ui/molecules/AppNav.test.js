@@ -11,6 +11,9 @@ describe('AppNav components', () => {
 
         expect(wrapper.classes()).toContain('flex');
         expect(wrapper.classes()).toContain('flex-row');
+        expect(wrapper.classes()).toContain('justify-end');
+        expect(wrapper.classes()).toContain('p-12');
+        expect(wrapper.classes()).toContain('mr-12');
     });
 
     it('should render nav-link for each props and class mx-4', () => {
