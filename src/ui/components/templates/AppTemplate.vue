@@ -1,5 +1,15 @@
 <template>
-    <h1 class="text-gray-800">App template Here</h1>
+    <div class="h-screen flex flex-col">
+        <header>
+            <slot name="header"></slot>
+        </header>
+        <section class="flex-grow">
+            <slot name="content"></slot>
+        </section>
+        <footer>
+            <slot name="footer"></slot>
+        </footer>
+    </div>
 </template>
 
 <script>
