@@ -9,7 +9,9 @@ module.exports = merge(commonConfig, {
     devServer: {
         open: true,
         port: 8000,
-        hot: true
+        hot: true,
+        inline: true,
+        watchContentBase: true
     },
 
     plugins: [

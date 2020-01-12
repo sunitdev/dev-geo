@@ -3,6 +3,8 @@ WEBPACK_SERVER_EXEC = node_modules/.bin/webpack-dev-server
 
 JEST_EXEC = node_modules/.bin/jest
 
+STORYBOOK_START_EXEC = node_modules/.bin/start-storybook
+
 test-data:
 	pytest tests
 
@@ -28,3 +30,6 @@ build-dev-frontend:
 
 serve:
 	$(WEBPACK_SERVER_EXEC) --config src/ui/webpack/webpack.dev.js
+
+storybook:
+	$(STORYBOOK_START_EXEC)
