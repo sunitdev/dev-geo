@@ -1,6 +1,7 @@
 const path = require('path');
 
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require('vue-loader');
 
 const UI_DIR = path.dirname(__dirname);
@@ -32,6 +33,13 @@ module.exports = {
                 loader: 'vue-loader'
             },
             {
+                test: /\.css$/,
+                use: [
+                  MiniCssExtractPlugin.loader,
+                  "css-loader", "postcss-loader",
+                  ],
+            },
+            {
                 test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader'
             }
@@ -40,6 +48,10 @@ module.exports = {
 
     plugins: [
         new VueLoaderPlugin(),
+        new MiniCssExtractPlugin({
+          filename: "styles.css",
+          chunkFilename: "styles.css"
+        }),
         new HTMLWebpackPlugin({
             template: path.join(UI_DIR, 'index.template.html')
         })
