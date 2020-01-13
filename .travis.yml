@@ -7,7 +7,7 @@ install:
     - yarn install --production=false
 
 before-deploy:
-    - make build-all
+    - make build-frontend
 
 deploy:
     provider: pages
