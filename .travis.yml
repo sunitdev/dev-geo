@@ -3,6 +3,17 @@ language: python
 python:
     - "3.7"
 
+install:
+  - pip install -r requirments/development.txt
+
+language: node_js
+
+nodejs:
+    - 12
+
+install:
+    - yarn install --production=false
+
 before-deploy:
     - make build-all
 
