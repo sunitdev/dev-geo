@@ -1,5 +1,6 @@
 <template>
     <div class="h-screen flex flex-col">
+        <github-corner></github-corner>
         <header>
             <slot name="header"></slot>
         </header>
@@ -10,7 +11,13 @@
 </template>
 
 <script>
+import GithubCorner from '@/components/atoms/GithubCorner.vue';
+
 export default {
-    name: 'app-template'
-}
+    name: "app-template",
+
+    components: {
+        GithubCorner
+    }
+};
 </script>
