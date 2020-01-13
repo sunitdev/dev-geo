@@ -44,8 +44,14 @@ describe('HomeTemplate Component', () => {
         expect(logoContainer.classes()).toContain('flex');
         expect(logoContainer.classes()).toContain('flex-col');
         expect(logoContainer.classes()).toContain('items-center');
-        expect(logoContainer.classes()).toContain('justify-center');
     });
 
+    it('Desc wrapper must have style applied', () => {
+        const wrapper = shallowMount(HomeTemplate);
+
+        const descWrapper = wrapper.find('[jest="desc-wrapper"]');
+
+        expect(descWrapper.classes()).toContain('mt-10');
+    });
 });
 
