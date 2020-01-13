@@ -1,2 +1,8 @@
 {
+    "repositories": [
+        {
+            "name": "React",
+            "url": "https://github.com/facebook/react"
+        }
+    ]
 }

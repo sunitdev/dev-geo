@@ -7,5 +7,8 @@ __pycache__/
 # Pytest files
 .pytest_cache/
 
+# Node Module
+node_modules/
+
 # Dist folder
 dist/

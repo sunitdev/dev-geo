@@ -3,14 +3,8 @@ language: python
 python:
     - "3.7"
 
-install:
-    - pip install -r requirments/development.txt
-
-script:
-    - make test
-
 before-deploy:
-    - make build
+    - make build-all
 
 deploy:
     provider: pages
@@ -20,3 +14,21 @@ deploy:
     local_dir: dist
     on:
         branch: master
+jobs:
+    include:
+        - language: python
+          python: 3.7
+          install:
+              - pip install -r requirments/development.txt
+          script:
+              - make test-data
+
+        - language: node_js
+          nodejs: 12
+          install:
+              - yarn install --production=false
+          script:
+              - make test-frontend
+
+
+
