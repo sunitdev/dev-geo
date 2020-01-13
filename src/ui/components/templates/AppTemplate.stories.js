@@ -1,12 +1,12 @@
-import Vue from 'vue';
+import Vue from "vue";
 
-import { storiesOf } from '@storybook/vue';
+import { storiesOf } from "@storybook/vue";
 
-import AppTemplate from './AppTemplate.vue';
+import AppTemplate from "./AppTemplate.vue";
 
-const stories = storiesOf('templates/AppTemplate', module);
+const stories = storiesOf("templates/AppTemplate", module);
 
-stories.add('Default', () => ({
+stories.add("Default", () => ({
     components: { AppTemplate },
     template: `<app-template>
         <template v-slot:header>
@@ -17,4 +17,3 @@ stories.add('Default', () => ({
         </template>
     </app-template>`
 }));
-
