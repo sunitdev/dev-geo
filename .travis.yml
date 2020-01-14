@@ -34,8 +34,7 @@ jobs:
           node_js: 12
           install: yarn install --production=false
           script: make build-frontend
-
-        - deploy:
+          deploy:
             provider: pages
             skip_cleanup: true
             github_token: $GITHUB_TOKEN
