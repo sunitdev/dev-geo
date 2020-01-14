@@ -1,14 +1,43 @@
-language: node_js
 
-nodejs:
-    - "12"
+# the following line is needed to enable the TravisCI build conditions
+conditions: v1
 
-install:
-    - yarn install --production=false
+# Conditional build stages
+stages:
+    - name: Python Tests
+    - name: UI Tests
+    - name: Deployment
+      if: branch = master
 
-before-deploy:
-    - make build-frontend
 
+# Following stages will run sequentially
+jobs:
+    include:
+
+        - stage: Python Tests
+          language: python
+          python: 3.7
+          install: pip install -r requirments/development.txt
+          script: make test-data
+
+        - stage: UI Tests
+          language: node_js
+          node: 12
+          install: yarn install --production=false
+          script: make test-frontend
+
+        - stage: Deployment
+          - language: python
+            python: 3.7
+            install: pip install -r requirments/development.txt
+            script: make build-data
+          - language: node_js
+            node_js: 12
+            install: yarn install --production=false
+            script: make build-frontend
+
+
+# Github pages development
 deploy:
     provider: pages
     skip_cleanup: true
@@ -17,21 +46,3 @@ deploy:
     local_dir: dist
     on:
         branch: master
-jobs:
-    include:
-        - language: python
-          python: 3.7
-          install:
-              - pip install -r requirments/development.txt
-          script:
-              - make test-data
-
-        - language: node_js
-          nodejs: 12
-          install:
-              - yarn install --production=false
-          script:
-              - make test-frontend
-
-
-
