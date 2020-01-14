@@ -1,13 +1,39 @@
-language: node_js
+python: 3.7
+node_js: 12
 
-nodejs:
-    - "12"
+# Conditional build stages
+# - Run Deployment only on master when code is pushed
+stages:
+    - name: Python Tests
+    - name: UI Tests
+    - name: Deployment
+      if: branch = master AND type = push
 
-install:
-    - yarn install --production=false
 
-before-deploy:
-    - make build-frontend
+# Following stages will run sequentially
+jobs:
+    include:
+        - stage: Python Tests
+          language: python
+          python: 3.7
+          install: pip install -r requirments/development.txt
+          script: make test-data
+
+        - stage: UI Tests
+          language: node_js
+          node: 12
+          install: yarn install --production=false
+          script: make test-frontend
+
+        - stage: Deployment
+          language: python
+          python: 3.7
+          install: pip install -r requirments/development.txt
+          script: make build-data
+          language: node_js
+          node_js: 12
+          install: yarn install --production=false
+          script: make build-frontend
 
 deploy:
     provider: pages
@@ -17,21 +43,3 @@ deploy:
     local_dir: dist
     on:
         branch: master
-jobs:
-    include:
-        - language: python
-          python: 3.7
-          install:
-              - pip install -r requirments/development.txt
-          script:
-              - make test-data
-
-        - language: node_js
-          nodejs: 12
-          install:
-              - yarn install --production=false
-          script:
-              - make test-frontend
-
-
-
