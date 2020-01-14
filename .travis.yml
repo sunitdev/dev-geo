@@ -1,6 +1,5 @@
-
-# the following line is needed to enable the TravisCI build conditions
-conditions: v1
+python: 3.7
+node_js: 12
 
 # Conditional build stages
 stages:
@@ -13,7 +12,6 @@ stages:
 # Following stages will run sequentially
 jobs:
     include:
-
         - stage: Python Tests
           language: python
           python: 3.7
@@ -36,13 +34,11 @@ jobs:
             install: yarn install --production=false
             script: make build-frontend
 
-
-# Github pages development
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    keep_history: true
-    local_dir: dist
-    on:
-        branch: master
+        deploy:
+            provider: pages
+            skip_cleanup: true
+            github_token: $GITHUB_TOKEN
+            keep_history: true
+            local_dir: dist
+            on:
+                branch: master
