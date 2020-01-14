@@ -12,7 +12,7 @@ test-frontend:
 	$(JEST_EXEC)
 
 build-all:
-	python src/data/main.py
+	python3 src/data/main.py
 	$(WEBPACK_EXEC) --config src/ui/webpack/webpack.prod.js
 
 build-data:
