@@ -2,11 +2,12 @@ python: 3.7
 node_js: 12
 
 # Conditional build stages
+# - Run Deployment only on master when code is pushed
 stages:
     - name: Python Tests
     - name: UI Tests
     - name: Deployment
-      if: branch = master
+      if: branch = master AND type = push
 
 
 # Following stages will run sequentially
