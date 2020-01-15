@@ -102,13 +102,37 @@ describe('AppSelect Component', () => {
         });
 
         // On click should return the option value
-        wrapper.find('select').element.value = 'OPTION_1';
-        wrapper.find('select').trigger('change');
+        const option1 = wrapper.find('select').findAll('option').at(0);
+        option1.setSelected()
         expect(onChangedCallback.mock.calls[0][0]).toBe('OPTION_1');
 
-        wrapper.find('select').element.value = 'OPTION_2';
-        wrapper.find('select').trigger('change');
+        const option2 = wrapper.find('select').findAll('option').at(1);
+        option2.setSelected()
         expect(onChangedCallback.mock.calls[1][0]).toBe('OPTION_2');
+
+    });
+
+    it('Setting selectedIndex props should call onChanged function', () => {
+        const onChangedCallback = jest.fn();
+
+        const wrapper = mount(AppSelect, {
+            propsData: {
+                options: [{
+                    text: 'Option 1',
+                    value: 'OPTION_1'
+                }, {
+                    text: 'Option 2',
+                    value: 'OPTION_2'
+                }],
+                onChanged: onChangedCallback
+            }
+        });
+
+        // On setting selectedIndex onChangedCallback must be called
+        wrapper.setProps({ selectedIndex: 1 });
+        wrapper.vm.$nextTick(() => {
+            expect(onChangedCallback.mock.calls[0][0]).toBe('OPTION_2');
+        });
 
     });
 

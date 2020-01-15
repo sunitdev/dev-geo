@@ -11,7 +11,10 @@
                         class="text-bold text-2xl mb-4" >
                         By Project
                     </h1>
-                    <app-select :options="options"></app-select>
+                    <app-select
+                        :options="options"
+                        :onChanged="onProjectChanged"
+                        :selectedIndex="selectedIndex"></app-select>
                 </div>
             </template>
             <template v-slot:map>
@@ -40,6 +43,7 @@ export default {
     data() {
         return {
             options: [],
+            selectedIndex: null,
             isloaded: false
         };
     },
@@ -52,9 +56,18 @@ export default {
             // Populate the options variable
             this.options = Object.keys(projects).map((key) => ({ text: key, value: key }) );
 
+            // Select the first option
+            this.selectedIndex = 0;
+
             // Disable loading
             this.isloaded = true;
         });
+    },
+
+    methods: {
+        onProjectChanged(value){
+            console.log('On Project Changed', value);
+        }
     }
 };
 </script>

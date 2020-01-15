@@ -26,12 +26,22 @@ export default {
 
     props: {
         options: Array,
+        selectedIndex: Number,
         onChanged: Function
     },
 
     data() {
         return {
             selectedOption: null
+        }
+    },
+
+    watch: {
+        selectedIndex(index) {
+            if(index !== null){
+                this.selectedOption = this.options[index].value;
+                this.onChanged(this.selectedOption);
+            }
         }
     },
 
