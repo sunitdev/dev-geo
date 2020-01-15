@@ -17,9 +17,14 @@
 </template>
 
 <script>
-import ProjectTemplate from '@/components/templates/ProjectTemplate.vue';
+import { getProjectData } from '@/api/ProjectData';
 
+import ProjectTemplate from '@/components/templates/ProjectTemplate.vue';
 import AppSelect from '@/components/atoms/AppSelect.vue';
+
+getProjectData().then((data) => {
+    console.log(data);
+});
 
 export default {
     name: 'project-page',

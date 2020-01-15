@@ -11,10 +11,15 @@ module.exports = merge(commonConfig, {
         port: 8000,
         hot: true,
         inline: true,
-        watchContentBase: true
+        watchContentBase: true,
+        proxy: {
+            '/static': {
+                target: 'https://sunitdeshpande.github.io/DevGeo/',
+                secure: true,
+                changeOrigin: true
+            }
+        }
     },
 
-    plugins: [
-        new HotModuleReplacementPlugin()
-    ]
+    plugins: [new HotModuleReplacementPlugin()]
 });
