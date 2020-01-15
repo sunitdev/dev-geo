@@ -47,7 +47,12 @@ export default {
     mounted: function(){
         // Get data
         getProjectData().then(data => {
-            console.log(data);
+            let projects = data.projects;
+
+            // Populate the options variable
+            this.options = Object.keys(projects).map((key) => ({ text: key, value: key }) );
+
+            // Disable loading
             this.isloaded = true;
         });
     }
