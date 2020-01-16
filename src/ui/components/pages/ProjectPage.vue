@@ -8,15 +8,25 @@
                 <div jest="controls-container" class="flex flex-col px-4">
                     <h1
                         jest="heading-by-project"
-                        class="text-bold text-2xl mb-4 mt-0" >
+                        class="font-bold text-2xl mb-4 mt-0" >
                         By Project
                     </h1>
                     <app-select
                         :options="options"
                         :onChanged="onProjectChanged"
                         :selectedIndex="selectedIndex"></app-select>
-                    <div v-if="selectedOption">
-                        {{ selectedOption }}
+                    <div v-if="selectedOption"
+                        class="flex mt-4">
+                        <img
+                            :src="selectedOption.icon"
+                            class="w-1/3"/>
+                        <div class="flex flex-col px-4">
+                            <h1 class="font-bold text-xl">{{ selectedOption.name }}</h1>
+                            <a :href="selectedOption.url"
+                                class="text-blue-600 underline"
+                                target="_blank">{{ selectedOption.url }}</a>
+                            <p class="mt-4">{{ selectedOption.description }}</p>
+                        </div>
                     </div>
                 </div>
             </template>
@@ -67,7 +77,10 @@ export default {
 
             // Select the first index
             this.selectedIndex = 0;
-            this.selectedOption = this.projects[this.options[0].value];
+            this.selectedOption = {
+                ...this.projects[this.options[0].value],
+                name: this.options[0]
+            }
 
             // Disable loading
             this.isloaded = true;
@@ -76,7 +89,10 @@ export default {
 
     methods: {
         onProjectChanged(value){
-            this.selectedOption = this.projects[value];
+            this.selectedOption = {
+                ...this.projects[value],
+                name: value
+            }
             this.countryData = this.projects[value].data;
         }
     }
