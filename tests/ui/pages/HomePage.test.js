@@ -9,7 +9,7 @@ describe('HomePage Component', () => {
 
         const description = wrapper.find('[jest="description"]');
 
-        expect(description.text().trim()).toBe('GeoVisualization of developers working on Open Source Projects.');
+        expect(description.text().trim()).toBe('GeoVisualization of contributors of Open Source Projects.');
 
         expect(description.classes()).toContain('text-2xl');
     });
