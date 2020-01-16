@@ -18,8 +18,8 @@ describe('ProjectTemplate Component', () => {
     it('control and map should have flex-grow', () => {
         const wrapper = shallowMount(ProjectTemplate);
 
-        expect(wrapper.find('[jest="controls"]').classes()).toContain('flex-grow');
-        expect(wrapper.find('[jest="map"]').classes()).toContain('flex-grow');
+        expect(wrapper.find('[jest="controls"]').classes()).toContain('w-1/3');
+        expect(wrapper.find('[jest="map"]').classes()).toContain('w-2/3');
     });
 
     it('should have controls and map as slots', () => {
