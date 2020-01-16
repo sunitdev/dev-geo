@@ -19,7 +19,7 @@ class TestRepositoryModel:
         assert repo.name == 'Test Repo'
         assert repo.url == 'https://github.com/sunitdeshpande/DevGeo'
         assert repo.icon == 'https://example.com/someicon.png'
-        assert repo.description = 'Test Repo'
+        assert repo.description == 'Test Repo'
         assert repo.url_name == 'DevGeo'
         assert repo.owner == 'sunitdeshpande'
 
