@@ -5,10 +5,10 @@
         <loading-overlay v-if="!isloaded"></loading-overlay>
         <project-template>
             <template v-slot:controls>
-                <div jest="controls-container" class="flex flex-col mt-20 p-4">
+                <div jest="controls-container" class="flex flex-col px-4">
                     <h1
                         jest="heading-by-project"
-                        class="text-bold text-2xl mb-4" >
+                        class="text-bold text-2xl mb-4 mt-0" >
                         By Project
                     </h1>
                     <app-select

@@ -18,7 +18,12 @@ class DataWriter:
     ```json
         {
             '<project_name>': {
-                '<country_code>': '<developer_count>'
+                'url': 'url',
+                'icon': 'icon',
+                'description': 'description',
+                'data': {
+                    '<country_code>': '<developer_count>'
+                }
             }
         }
     ```
@@ -48,7 +53,12 @@ class DataWriter:
         for repo in self.config.repositories:
             print(f'Generating data for {repo.name} ...')
             contributors = GithubApi.get_contributors(repo)
-            output_data.update({ repo.name: self.__format_contributors(contributors) })
+            output_data.update({ repo.name: {
+                'url': repo.url,
+                'icon': repo.icon,
+                'description': repo.description,
+                'data': self.__format_contributors(contributors)
+            }})
 
         # Write file
         with open(path, 'w') as file:
