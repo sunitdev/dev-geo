@@ -78,7 +78,7 @@ class DataWriter:
                     # Take the last part of the location
                     user_country = contributor.location.split(',')[-1].strip()
                     # Do a fuzzy seach and take alpha 3 code
-                    country = countries.search_fuzzy(user_country)[0].alpha_3
+                    country = countries.search_fuzzy(user_country)[0].alpha_2
                     # Update count
                     contributor_map.update({
                         country: contributor_map.get(country, 0) + 1
