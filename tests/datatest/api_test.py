@@ -16,7 +16,11 @@ class TestGithubApi:
         '''
         GithubApi.get_repository_info() should return APIRepostiory with attributes set
         '''
-        repo = Repository(name='Project site', url='https://github.com/sunitdeshpande/DevGeo')
+        repo = Repository(
+                name='Project site',
+                url='https://github.com/sunitdeshpande/DevGeo',
+                icon='https://example.com/someicon.png',
+                description='Test Repo')
 
         api_repo = GithubApi.get_repository_info(repo)
 
@@ -28,7 +32,11 @@ class TestGithubApi:
         '''
         GithubApi.get_contributors() should return
         '''
-        repo = Repository(name='Personal site', url='https://github.com/sunitdeshpande/sunitdeshpande.github.io')
+        repo = Repository(
+                name='Personal site',
+                url='https://github.com/sunitdeshpande/sunitdeshpande.github.io',
+                icon="https://example.com/someicon.png",
+                description="Test Repo")
 
         contributors = GithubApi.get_contributors(repo)
 

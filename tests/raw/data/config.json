@@ -2,7 +2,9 @@
     "repositories": [
         {
             "name": "Personal Site",
-            "url": "https://github.com/sunitdeshpande/sunitdeshpande.github.io"
+            "url": "https://github.com/sunitdeshpande/sunitdeshpande.github.io",
+            "icon": "https://example.com/someicon.png",
+            "description": "Test Repo"
         }
     ]
 }
