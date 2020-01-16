@@ -18,7 +18,8 @@
                 </div>
             </template>
             <template v-slot:map>
-                <geo-heatmap></geo-heatmap>
+                <geo-heatmap
+                    :countryData="countryData"></geo-heatmap>
             </template>
         </project-template>
     </div>
@@ -46,17 +47,19 @@ export default {
         return {
             options: [],
             selectedIndex: null,
-            isloaded: false
+            countryData: null,
+            isloaded: false,
+            projects: null
         };
     },
 
     mounted: function(){
         // Get data
         getProjectData().then(data => {
-            let projects = data.projects;
+            this.projects = data.projects;
 
             // Populate the options variable
-            this.options = Object.keys(projects).map((key) => ({ text: key, value: key }) );
+            this.options = Object.keys(this.projects).map((key) => ({ text: key, value: key }) );
 
             // Select the first option
             this.selectedIndex = 0;
@@ -68,7 +71,7 @@ export default {
 
     methods: {
         onProjectChanged(value){
-            console.log('On Project Changed', value);
+            this.countryData = this.projects[value];
         }
     }
 };
