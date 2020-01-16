@@ -8,6 +8,10 @@ import  { routes }  from '@/routes';
 // Tailwind css
 import '@/styles/tailwind.css';
 
+// Fontawesome
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+
 // Router
 Vue.use(VueRouter);
 

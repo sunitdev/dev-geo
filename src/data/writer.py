@@ -18,7 +18,12 @@ class DataWriter:
     ```json
         {
             '<project_name>': {
-                '<country_code>': '<developer_count>'
+                'url': 'url',
+                'icon': 'icon',
+                'description': 'description',
+                'data': {
+                    '<country_code>': '<developer_count>'
+                }
             }
         }
     ```
@@ -48,7 +53,12 @@ class DataWriter:
         for repo in self.config.repositories:
             print(f'Generating data for {repo.name} ...')
             contributors = GithubApi.get_contributors(repo)
-            output_data.update({ repo.name: self.__format_contributors(contributors) })
+            output_data.update({ repo.name: {
+                'url': repo.url,
+                'icon': repo.icon,
+                'description': repo.description,
+                'data': self.__format_contributors(contributors)
+            }})
 
         # Write file
         with open(path, 'w') as file:
@@ -68,7 +78,7 @@ class DataWriter:
                     # Take the last part of the location
                     user_country = contributor.location.split(',')[-1].strip()
                     # Do a fuzzy seach and take alpha 3 code
-                    country = countries.search_fuzzy(user_country)[0].alpha_3
+                    country = countries.search_fuzzy(user_country)[0].alpha_2
                     # Update count
                     contributor_map.update({
                         country: contributor_map.get(country, 0) + 1

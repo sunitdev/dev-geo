@@ -7,6 +7,8 @@ class Repository:
     '''
     name: str
     url: str
+    icon: str
+    description: str
 
     @property
     def url_name(self):

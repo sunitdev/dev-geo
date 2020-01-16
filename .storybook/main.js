@@ -5,6 +5,8 @@ const UI_DIR = path.join(path.dirname(__dirname), 'src', 'ui');
 module.exports = {
     stories: ['../src/**/*.stories.js'],
 
+    addons: ['@storybook/addon-actions/register'],
+
     webpack: async (config) => {
         config.resolve = {
             ...config.resolve,

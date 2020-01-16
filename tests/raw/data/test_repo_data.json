@@ -1,5 +1,8 @@
 {
     "Personal Site": {
-        "IRL": 1
+        "url": "https://github.com/sunitdeshpande/sunitdeshpande.github.io",
+        "icon": "https://example.com/someicon.png",
+        "description": "Test Repo",
+        "data": { "IE": 1 }
     }
 }

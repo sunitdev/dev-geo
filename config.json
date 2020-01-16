@@ -2,7 +2,15 @@
     "repositories": [
         {
             "name": "React",
-            "url": "https://github.com/facebook/react"
+            "url": "https://github.com/facebook/react",
+            "icon": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+            "description": "A JavaScript library for building user interfaces"
+        },
+        {
+            "name": "Vuejs",
+            "url": "https://github.com/vuejs/vue",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
+            "description": "The Progressive JavaScript Framework"
         }
     ]
 }

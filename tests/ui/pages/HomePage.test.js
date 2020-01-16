@@ -12,7 +12,6 @@ describe('HomePage Component', () => {
         expect(description.text().trim()).toBe('GeoVisualization of developers working on Open Source Projects.');
 
         expect(description.classes()).toContain('text-2xl');
-        expect(description.classes()).toContain('text-center');
     });
 
     it('footer should have text and style', () => {
