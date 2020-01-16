@@ -15,6 +15,9 @@
                         :options="options"
                         :onChanged="onProjectChanged"
                         :selectedIndex="selectedIndex"></app-select>
+                    <div v-if="selectedOption">
+                        {{ selectedOption }}
+                    </div>
                 </div>
             </template>
             <template v-slot:map>
@@ -47,6 +50,7 @@ export default {
         return {
             options: [],
             selectedIndex: null,
+            selectedOption: null,
             countryData: null,
             isloaded: false,
             projects: null
@@ -61,8 +65,9 @@ export default {
             // Populate the options variable
             this.options = Object.keys(this.projects).map((key) => ({ text: key, value: key }) );
 
-            // Select the first option
+            // Select the first index
             this.selectedIndex = 0;
+            this.selectedOption = this.projects[this.options[0].value];
 
             // Disable loading
             this.isloaded = true;
@@ -71,7 +76,8 @@ export default {
 
     methods: {
         onProjectChanged(value){
-            this.countryData = this.projects[value];
+            this.selectedOption = this.projects[value];
+            this.countryData = this.projects[value].data;
         }
     }
 };

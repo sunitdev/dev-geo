@@ -25,18 +25,22 @@ function parseResponse(response){
     // Convert country count to percentage
     let projectCountryPercentage = Object.keys(response.data)
         .map((key) => {
-            let totalCount = Object.values(response.data[key]).reduce((sum, count) => sum + count);
+            const projectData = response.data[key];
 
-            let countriesCount = response.data[key];
+            const totalDeveloperCount = Object.values(projectData.data).reduce((sum, count) => sum + count);
 
-            let countriesPercentage = Object.keys(countriesCount)
+            const countriesPercentage = Object.keys(projectData.data)
                 .map((country) => {
-                    return [country, (countriesCount[country] / totalCount ) * 100]
+                    return [country, (projectData.data[country] / totalDeveloperCount ) * 100]
                 });
 
-            return [ key, Object.fromEntries(countriesPercentage) ];
+            return [ key, {
+                ...projectData,
+                data: Object.fromEntries(countriesPercentage)
+            }];
         });
     data.projects = Object.fromEntries(projectCountryPercentage);
+
 
     return data;
 }
