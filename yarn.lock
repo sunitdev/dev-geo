@@ -6586,6 +6586,11 @@ jest@^24.9.0:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
 
+jquery@>=1.5, jquery@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 js-beautify@^1.6.12, js-beautify@^1.6.14:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/js-beautify/-/js-beautify-1.10.2.tgz#88c9099cd6559402b124cfab18754936f8a7b178"
@@ -6734,6 +6739,13 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+jvectormap-next@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/jvectormap-next/-/jvectormap-next-3.1.0.tgz#238f35eb46bcfd2acf3d05a9ec90f254cab79b41"
+  integrity sha512-0cWh7b6zjWNnKqjON0yeseYzV4oY3BJItxEQqi2L9T43bylaeUMfn7FfbSpF3xsxnJvu8rfc/ZjDYEesJ9I+SQ==
+  dependencies:
+    jquery ">=1.5"
 
 killable@^1.0.1:
   version "1.0.1"

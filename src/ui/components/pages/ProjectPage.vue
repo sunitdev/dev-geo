@@ -18,7 +18,7 @@
                 </div>
             </template>
             <template v-slot:map>
-                <h1>Map</h1>
+                <geo-heatmap></geo-heatmap>
             </template>
         </project-template>
     </div>
@@ -30,6 +30,7 @@ import { getProjectData } from '@/api/ProjectData';
 import ProjectTemplate from '@/components/templates/ProjectTemplate.vue';
 import AppSelect from '@/components/atoms/AppSelect.vue';
 import LoadingOverlay from'@/components/atoms/LoadingOverlay.vue';
+import GeoHeatmap from '@/components/atoms/GeoHeatmap.vue';
 
 export default {
     name: 'project-page',
@@ -37,7 +38,8 @@ export default {
     components: {
         ProjectTemplate,
         AppSelect,
-        LoadingOverlay
+        LoadingOverlay,
+        GeoHeatmap
     },
 
     data() {
