@@ -10,7 +10,7 @@
                     <h1
                         jest="description"
                         class="text-2xl">
-                        GeoVisualization of contributors of Open Source Projects.
+                        GeoVisualization of Contributors of Open Source Projects.
                     </h1>
                     <p  v-if="lastUpdated"
                         class="text-gray-600 mt-1">Data last updated - {{ lastUpdated }}</p>
