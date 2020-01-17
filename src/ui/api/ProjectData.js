@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const DATA_URL = '/static/raw/data.json';
+const DATA_URL = 'https://sunitdeshpande.github.io/DevGeo/static/raw/data.json';
 
 let projectData = null;
 
