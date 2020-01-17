@@ -73,7 +73,9 @@ export default {
             this.projects = data.projects;
 
             // Populate the options variable
-            this.options = Object.keys(this.projects).map((key) => ({ text: key, value: key }) );
+            this.options = Object.keys(this.projects)
+                        .sort()
+                        .map((key) => ({ text: key, value: key }) );
 
             // Select the first index
             this.selectedIndex = 0;
