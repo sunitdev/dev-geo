@@ -11,6 +11,12 @@
             "url": "https://github.com/vuejs/vue",
             "icon": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
             "description": "The Progressive JavaScript Framework"
+        },
+        {
+            "name": "Django",
+            "url": "https://github.com/django/django",
+            "icon": "https://banner2.cleanpng.com/20180711/rtc/kisspng-django-web-development-web-framework-python-softwa-django-5b45d913f29027.4888902515313042119936.jpg",
+            "description": "The Web framework for perfectionists with deadlines"
         }
     ]
 }
