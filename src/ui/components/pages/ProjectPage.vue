@@ -9,7 +9,7 @@
                     <h1
                         jest="heading-by-project"
                         class="font-bold text-2xl mb-4 mt-0" >
-                        By Project
+                        Demographic of Contributors
                     </h1>
                     <app-select
                         :options="options"
