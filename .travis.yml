@@ -32,9 +32,9 @@ jobs:
             - cp src/ui/static/raw/data.json dist/static/raw/data.json
           deploy:
             provider: pages
+            skip_cleanup: true
             github_token: $GITHUB_TOKEN
             keep_history: true
-            cleanup: false
             local_dir: dist
             on:
                 branch: master
