@@ -32,6 +32,7 @@ jobs:
             skip_cleanup: true
             github_token: $GITHUB_TOKEN
             keep_history: true
+            cleanup: false
             local_dir: dist
             on:
                 branch: master
