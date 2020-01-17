@@ -29,6 +29,18 @@
             "url": "https://github.com/flutter/flutter",
             "icon": "https://plugins.jetbrains.com/files/9212/74623/icon/META-INF_pluginIcon.png",
             "description": "Build beautiful native apps in record time"
+        },
+        {
+            "name": "VS Code",
+            "url": "https://github.com/microsoft/vscode",
+            "icon": "https://cdn.freebiesupply.com/logos/large/2x/visual-studio-code-logo-png-transparent.png",
+            "description": "Code editing Redefined"
+        },
+        {
+            "name": "NeoVim",
+            "url": "https://github.com/neovim/neovim",
+            "icon": "https://cdn.dribbble.com/users/2008/screenshots/1442436/mark-dribbble.png",
+            "description": "Vim out of the box."
         }
     ]
 }
