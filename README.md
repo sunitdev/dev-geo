@@ -9,8 +9,6 @@
   </a>
 
   <p align="center">
-  Demographic visualization of OpenSource Projects.
-    <br />
     <a href="https://sunitdeshpande.github.io/DevGeo/#/">View Demo</a>
     ·
     <a href="https://github.com/sunitdeshpande/DevGeo/issues">Report Bug</a>
@@ -25,7 +23,7 @@
 
 [![DevGeo Screen Shot](docs/img/screen_shot.png)](https://sunitdeshpande.github.io/DevGeo/)
 
-**DevGeo** is visualization of demographics of contributors associated with differeent Open Source projects.
+**DevGeo** is a visualization of the demographics of contributors associated with different Open Source projects.
 
 ### Built With
 Following Frameworks, Libraries and tools are used in building this app.
