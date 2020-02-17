@@ -1,5 +1,6 @@
 # Editor file
 .vim/
+.idea/
 
 # Compiled files
 __pycache__/
