@@ -1,16 +1,16 @@
 {
     "repositories": [
         {
-            "name": "React",
-            "url": "https://github.com/facebook/react",
-            "icon": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
-            "description": "A JavaScript library for building user interfaces"
-        },
-        {
             "name": "Vuejs",
             "url": "https://github.com/vuejs/vue",
             "icon": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg",
             "description": "The Progressive JavaScript Framework"
+        },
+        {
+            "name": "React",
+            "url": "https://github.com/facebook/react",
+            "icon": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+            "description": "A JavaScript library for building user interfaces"
         },
         {
             "name": "Django",
@@ -41,6 +41,78 @@
             "url": "https://github.com/neovim/neovim",
             "icon": "https://cdn.dribbble.com/users/2008/screenshots/1442436/mark-dribbble.png",
             "description": "Vim out of the box."
+        },
+        {
+            "name": "D3.js",
+            "url": "https://github.com/d3/d3",
+            "icon": "https://d3js.org/logo.svg",
+            "description": "Bring data to life with SVG, Canvas and HTML."
+        },
+        {
+            "name": "Tensorflow",
+            "url": "https://github.com/tensorflow/tensorflow",
+            "icon": "https://i0.wp.com/syncedreview.com/wp-content/uploads/2017/05/tensorflow_logo-svg.png?fit=1000%2C1070&ssl=1",
+            "description": "An Open Source Machine Learning Framework for Everyone"
+        },
+        {
+            "name": "Electron",
+            "url": "https://github.com/electron/electron",
+            "icon": "https://cdn.iconscout.com/icon/free/png-256/electron-67-1175035.png",
+            "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS"
+        },
+        {
+            "name": "Node",
+            "url": "https://github.com/nodejs/node",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png",
+            "description": "Node.js JavaScript runtime"
+        },
+        {
+            "name": "TypeScript",
+            "url": "https://github.com/microsoft/TypeScript",
+            "icon": "https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png",
+            "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output."
+        },
+        {
+            "name": "Angular",
+            "url": "https://github.com/angular/angular",
+            "icon": "https://angular.io/assets/images/logos/angular/angular.png",
+            "description": "One framework. Mobile & desktop."
+        },
+        {
+            "name": "laravel",
+            "url": "https://github.com/laravel/laravel",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
+            "description": "A PHP framework for web artisans."
+        },
+        {
+            "name": "JQuery",
+            "url": "https://github.com/jquery/jquery",
+            "icon": "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png",
+            "description": "jQuery JavaScript Library"
+        },
+        {
+            "name": "Webpack",
+            "url": "https://github.com/webpack/webpack",
+            "icon": "https://webpack.js.org/assets/icon-square-big.svg",
+            "description": "A bundler for javascript and friends."
+        },
+        {
+            "name": "Atom",
+            "url": "https://github.com/atom/atom",
+            "icon": "https://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png",
+            "description": "The hackable text editor"
+        },
+        {
+            "name": "Ansible",
+            "url": "https://github.com/ansible/ansible",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/1200px-Ansible_logo.svg.png",
+            "description": "IT Automation tool"
+        },
+        {
+            "name": "Jenkins",
+            "url": "https://github.com/jenkinsci/jenkins",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1200px-Jenkins_logo.svg.png",
+            "description": "Jenkins automation server"
         }
     ]
 }
