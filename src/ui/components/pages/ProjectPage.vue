@@ -23,7 +23,7 @@
                         <div class="flex flex-col px-4">
                             <h1 class="font-bold text-xl">{{ selectedOption.name }}</h1>
                             <a :href="selectedOption.url"
-                                class="text-blue-600 underline"
+                                class="text-blue-600 underline break-all"
                                 target="_blank">{{ selectedOption.url }}</a>
                             <p class="mt-4">{{ selectedOption.description }}</p>
                         </div>
