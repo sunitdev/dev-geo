@@ -1,19 +1,16 @@
-
-[![Build Status](https://travis-ci.com/sunitdeshpande/DevGeo.svg?token=PLn2sPSViHcmqQB5ktFY&branch=master)](https://travis-ci.com/sunitdeshpande/DevGeo)
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/sunitdeshpande/DevGeo">
+  <a href="https://github.com/sunitdev/dev-geo">
     <img src="docs/img/logo.png" alt="Logo" width="150"/>
   </a>
 
   <p align="center">
-    <a href="https://sunitdeshpande.github.io/DevGeo/#/">View Demo</a>
+    <a href="https://sunitdev.github.io/dev-geo/#/">View Demo</a>
     ·
-    <a href="https://github.com/sunitdeshpande/DevGeo/issues">Report Bug</a>
+    <a href="https://github.com/sunitdev/dev-geo">Report Bug</a>
     ·
-    <a href="https://github.com/sunitdeshpande/DevGeo/issues">Request Feature</a>
+    <a href="https://github.com/sunitdev/dev-geo">Request Feature</a>
   </p>
 </p>
 
@@ -36,7 +33,5 @@ Following Frameworks, Libraries and tools are used in building this app.
 
 ## Contact
 
-Sunit Deshpande - sunitdeshpande1234@gmail.com
-
-Project Link: [https://github.com/sunitdeshpande/DevGeo](https://github.com/sunitdeshpande/DevGeo)
+Project Link: [https://github.com/sunitdev/dev-geo](https://github.com/sunitdev/dev-geo)
 
