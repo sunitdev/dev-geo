@@ -4,14 +4,6 @@
   <a href="https://github.com/sunitdev/dev-geo">
     <img src="docs/img/logo.png" alt="Logo" width="150"/>
   </a>
-
-  <p align="center">
-    <a href="https://sunitdev.github.io/dev-geo/#/">View Demo</a>
-    ·
-    <a href="https://github.com/sunitdev/dev-geo">Report Bug</a>
-    ·
-    <a href="https://github.com/sunitdev/dev-geo">Request Feature</a>
-  </p>
 </p>
 
 
