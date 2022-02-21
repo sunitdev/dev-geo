@@ -5,6 +5,7 @@ from .context import *
 from data.config import Config
 from data.models import Repository
 
+
 class TestConfig:
     '''
     Test cases for `data.config.Config` class
@@ -22,7 +23,6 @@ class TestConfig:
         # Default config location
         assert config.config_path == os.path.join(BASE_DIR, 'config.json')
 
-
     def test_config_path_parameter(self):
         '''
         Config class must accept a alternative config path as parameter
@@ -30,7 +30,6 @@ class TestConfig:
         config = self.__get_test_config()
 
         assert config.config_path == self._TEST_REPO_CONFIG_PATH
-
 
     def test_repository_property(self):
         '''
@@ -46,10 +45,9 @@ class TestConfig:
         repo = config.repositories[0]
         assert isinstance(repo, Repository)
         assert repo.name == 'Personal Site'
-        assert repo.url == 'https://github.com/sunitdeshpande/sunitdeshpande.github.io'
-        assert repo.url_name == 'sunitdeshpande.github.io'
-        assert repo.owner == 'sunitdeshpande'
-
+        assert repo.url == 'https://github.com/sunitdev/sunitdev.github.io'
+        assert repo.url_name == 'sunitdev.github.io'
+        assert repo.owner == 'sunitdev'
 
     def __get_test_config(self):
         '''

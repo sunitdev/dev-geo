@@ -16,7 +16,6 @@ jobs:
               uses: actions/setup-python@v2
               with:
                   python-version: '3.x'
-                  architecture: 'x86'
 
             - name: 🛎 Checkout
               uses: actions/checkout@v2

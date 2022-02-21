@@ -2,6 +2,7 @@ from .context import *
 
 from data.models import Repository, APIContributor
 
+
 class TestRepositoryModel:
     '''
     Test cases from `data.models.Repository` class
@@ -12,16 +13,16 @@ class TestRepositoryModel:
         Repository class must accept name and url of the repo and initalize some properties
         '''
         repo = Repository(name='Test Repo',
-                url='https://github.com/sunitdeshpande/DevGeo',
-                icon='https://example.com/someicon.png',
-                description='Test Repo')
+                          url='https://github.com/sunitdev/dev-geo',
+                          icon='https://example.com/someicon.png',
+                          description='Test Repo')
 
         assert repo.name == 'Test Repo'
-        assert repo.url == 'https://github.com/sunitdeshpande/DevGeo'
+        assert repo.url == 'https://github.com/sunit-dev/dev-geo'
         assert repo.icon == 'https://example.com/someicon.png'
         assert repo.description == 'Test Repo'
         assert repo.url_name == 'DevGeo'
-        assert repo.owner == 'sunitdeshpande'
+        assert repo.owner == 'sunit-dev'
 
 
 class TestAPIContributorModel:
