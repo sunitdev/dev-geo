@@ -1,0 +1,39 @@
+name: Build and Deploy
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 📦 Setup Node
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '16'
+
+            - name: 🐍 Setup Python
+              uses: actions/setup-python@v2
+              with:
+                  python-version: '3.x'
+                  architecture: 'x86'
+
+            - name: 🛎 Checkout
+              uses: actions/checkout@v2
+
+            - name: 🐱 Install Yarn Dependency
+              uses: borales/actions-yarn@v2.3.0
+              with:
+                  cmd: install
+
+            - name: 🔧 Build
+              run: |
+                  make build-frontend
+                  mkdir -p dist/static/raw
+                  cp src/ui/static/raw/data.json dist/static/raw/data.json
+
+            - name: 🚀 Deploy
+              uses: JamesIves/github-pages-deploy-action@v4.2.5
+              with:
+                  branch: gh-pages
+                  folder: dist
